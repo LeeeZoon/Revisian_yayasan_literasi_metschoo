@@ -26,8 +26,9 @@ export default function WelcomeSection() {
                             {/* Placeholder image */}
                             <div className="absolute inset-0 bg-gradient-to-br from-metland-blue-deeper to-metland-blue-dark flex items-center justify-center">
                                 <div className="text-center">
-                                    <div className="text-7xl mb-4">👤</div>
-                                    <p className="text-white/50 text-sm">Foto Ketua Yayasan</p>
+                                    <div className="text-7xl mb-4">
+                                        <img src="assets/fotoketua.jpg" alt="Foto Ketua Yayasan" className="w-full h-full object-cover" />
+                                    </div>
                                 </div>
                             </div>
                             {/* Decorative frame */}

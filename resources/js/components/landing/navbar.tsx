@@ -47,31 +47,21 @@ export default function Navbar() {
                     : 'bg-transparent py-4'
             }`}
         >
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8">
+            <div className="mx-auto flex max-w-7xl items-center px-4 lg:px-8">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="relative w-10 h-10 flex items-center justify-center">
-                        <svg viewBox="0 0 100 120" className="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
-                            {/* Flame/leaf */}
-                            <path d="M50 5 C50 5 62 20 62 30 C62 38 56 42 50 42 C44 42 38 38 38 30 C38 20 50 5 50 5Z" fill="#3D8EC9" />
-                            {/* Upper M shape */}
-                            <path d="M20 45 L50 75 L80 45 L80 85 C80 85 68 72 50 72 C32 72 20 85 20 85 Z" fill="#3D8EC9" />
-                            {/* Lower M shape lighter */}
-                            <path d="M10 75 L10 115 L35 115 L35 95 C35 88 42 82 50 82 C58 82 65 88 65 95 L65 115 L90 115 L90 75 C90 75 75 60 50 60 C25 60 10 75 10 75Z" fill="#A8D8F0" />
-                        </svg>
+                        <img src="assets/logoyayasan.png" alt="Logo Yayasan" width={20} height={20} />
                     </div>
                     <div className="hidden sm:block">
                         <span className={`block text-base font-bold leading-tight transition-colors duration-300 ${isScrolled ? 'text-metland-dark' : 'text-white'}`}>
-                            Yayasan Pendidikan
-                        </span>
-                        <span className={`block text-sm font-medium tracking-wider transition-colors duration-300 ${isScrolled ? 'text-metland-blue' : 'text-metland-blue-light'}`}>
-                            METLAND
+                            Yayasan Pendidikan  Metland
                         </span>
                     </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-1">
+                <nav className="ml-auto hidden lg:flex items-center gap-1 px-10">
                     {navItems.map((item) => (
                         <div
                             key={item.label}
@@ -121,16 +111,15 @@ export default function Navbar() {
                             Dashboard
                         </Link>
                     ) : (
-                        <Link
-                            href={login()}
-                            className={`hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
+                        <button
+                            className={`hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300  ${
                                 isScrolled
                                     ? 'bg-metland-blue text-white hover:bg-metland-blue-dark shadow-md hover:shadow-lg'
                                     : 'bg-white/15 text-white border border-white/30 hover:bg-white/25 backdrop-blur-sm'
                             }`}
                         >
-                            Login Admin
-                        </Link>
+                            Get in touch
+                        </button>
                     )}
 
                     {/* Mobile menu toggle */}
